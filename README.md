@@ -227,6 +227,9 @@ npm run build
 
 ## Changelogs
 
+#### v1.0.1 (March 21, 2021)
+- Removed a log output
+
 #### v1.0.0 (March 21, 2021)
 - First component release
 
