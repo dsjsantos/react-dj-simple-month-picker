@@ -1,0 +1,134 @@
+/* --------------------------------
+**  module styles
+** --------------------------------
+**/
+$main_shadowfog-bgColor: rgba(0, 0, 0, 0.3);
+$theme_dark-bgColor: #323232;
+$theme_dark-color: #f0f0f0;
+$theme_light-bgColor: #f0f0f0;
+$theme_light-color: #323232;
+
+div._smp-not-visible_ {
+    display: none !important;
+}
+
+div#_smpFrameWrapperId_._smp-frame-wrapper_ {
+    font-family: inherit;
+    font-size: inherit;
+    
+    & > ._smp-frame_ {
+        background-color: $main_shadowfog-bgColor;
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-family: inherit;
+        font-size: inherit;
+    }
+}
+
+div#_simpleMonthPickerId_._smp-box_ {
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+
+    & > ._year-row_ {
+        & > ._year-item-wrapper_ {
+            display: flex;
+            flex-direction: row;
+    
+            ._button-box_, ._info-box_ {
+                margin: 1px;
+
+                & > div {
+                    padding: 0.75em 1em;
+                    text-align: center;
+                }
+            }
+
+            ._button-box_ {
+                width: auto;
+
+                &.clickable:hover {
+                    cursor: pointer;
+                }
+            }
+
+            ._info-box_ {
+                width: 100%;
+            }
+        }
+    }
+
+    & > ._month-row_ {
+        & > ._month-item-wrapper_ {
+            padding: 0.5px;
+            display: inline-block;
+            height: 100%;
+            width: 25%;
+            height: auto;
+
+            ._month-item-box_ {
+                padding: 0.75em 0;
+                text-align: center;
+    
+                &.clickable:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    /* Light theme */
+    &.theme-light {
+        & > ._year-row_ > ._year-item-wrapper_ {
+            background-color: darken($theme_light-bgColor, 20%);
+            ._button-box_, ._info-box_ {
+                background-color: $theme_light-bgColor;
+                color: $theme_light-color;
+            }
+        }
+        & > ._month-row_ > ._month-item-wrapper_ {
+            background-color: darken($theme_light-bgColor, 20%);
+            ._month-item-box_ {
+                background-color: $theme_light-bgColor;
+                color: $theme_light-color;
+            }
+        }
+        & > ._year-row_ > ._year-item-wrapper_, & > ._month-row_ > ._month-item-wrapper_ {
+            .disabled {
+                color: lighten($theme_light-color, 50%);
+            }
+        }
+    }
+
+    /* Dark theme */
+    &.theme-dark {
+        & > ._year-row_ > ._year-item-wrapper_ {
+            background-color: lighten($theme_dark-bgColor, 20%);
+            ._button-box_, ._info-box_ {
+                background-color: $theme_dark-bgColor;
+                color: $theme_dark-color;
+            }
+        }
+        & > ._month-row_ > ._month-item-wrapper_ {
+            background-color: lighten($theme_dark-bgColor, 20%);
+            ._month-item-box_ {
+                background-color: $theme_dark-bgColor;
+                color: $theme_dark-color;
+            }
+        }
+        & > ._year-row_ > ._year-item-wrapper_, & > ._month-row_ > ._month-item-wrapper_ {
+            .disabled {
+                color: darken($theme_dark-color, 50%);
+            }
+        }
+    }
+}
