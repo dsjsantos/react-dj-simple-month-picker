@@ -150,8 +150,6 @@ class PickerBox extends Component {
         const cols = Array.from({ length: 4}, (_, indx) => indx + 1);
         const mayGoBack = visibleYear>gridData.minYear;
         const mayGoForward = visibleYear<gridData.maxYear;
-
-        console.log(this.props, this.state);
     
         return(
             <div 
