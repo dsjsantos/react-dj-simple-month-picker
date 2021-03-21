@@ -143,7 +143,7 @@ class PickerBox extends Component {
     }
 
     render() {
-        const { gridData, visible, theme } = this.props;
+        const { onlyPickerBox, gridData, visible, theme } = this.props;
         const { visibleYear } = this.state;
         const themeClass = `theme-${theme.toLowerCase()==="dark" ? "dark" : "light"}`;
         const rows = Array.apply(null, { length: 3}).map(Number.call, Number);
@@ -156,7 +156,7 @@ class PickerBox extends Component {
         return(
             <div 
                 id="_simpleMonthPickerId_"
-                className={`_smp-box_ ${themeClass}${!visible ? " _smp-not-visible_" : ""}`}
+                className={`_smp-box_ ${themeClass}${!visible ? " _smp-not-visible_" : ""}${onlyPickerBox ? " static" : ""}`}
             >
                 <div className="_year-row_">
                     <div className="_year-item-wrapper_">

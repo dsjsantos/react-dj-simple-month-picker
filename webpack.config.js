@@ -22,10 +22,6 @@ module.exports = {
           'css-loader'
         ]
       },
-      {
-        test: /\.sass$/,
-        use: 'sass-loader'
-      }
     ],
   },
   resolve: {

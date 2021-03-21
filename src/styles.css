@@ -22,14 +22,15 @@ div#_smpFrameWrapperId_._smp-frame-wrapper_ {
 div#_simpleMonthPickerId_._smp-box_ {
   display: inline-block;
   overflow: hidden;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   width: 100%;
   font-family: inherit;
   font-size: inherit;
   /* Light theme */
   /* Dark theme */ }
+  div#_simpleMonthPickerId_._smp-box_:not(.static) {
+    position: absolute;
+    left: 0;
+    bottom: 0; }
   div#_simpleMonthPickerId_._smp-box_ > ._year-row_ > ._year-item-wrapper_ {
     display: flex;
     flex-direction: row; }
@@ -45,7 +46,7 @@ div#_simpleMonthPickerId_._smp-box_ {
     div#_simpleMonthPickerId_._smp-box_ > ._year-row_ > ._year-item-wrapper_ ._info-box_ {
       width: 100%; }
   div#_simpleMonthPickerId_._smp-box_ > ._month-row_ > ._month-item-wrapper_ {
-    padding: 0.5px;
+    padding: 1px;
     display: inline-block;
     height: 100%;
     width: 25%;
