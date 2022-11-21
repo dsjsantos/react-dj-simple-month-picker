@@ -25,6 +25,8 @@ div#_simpleMonthPickerId_._smp-box_ {
   width: 100%;
   font-family: inherit;
   font-size: inherit;
+  -webkit-user-select: none;
+  user-select: none;
   /* Light theme */
   /* Dark theme */ }
   div#_simpleMonthPickerId_._smp-box_:not(.static) {

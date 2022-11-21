@@ -36,6 +36,9 @@ div#_simpleMonthPickerId_._smp-box_ {
     font-family: inherit;
     font-size: inherit;
 
+    -webkit-user-select: none;
+    user-select: none;
+
     &:not(.static) {
         position: absolute;
         left: 0;
