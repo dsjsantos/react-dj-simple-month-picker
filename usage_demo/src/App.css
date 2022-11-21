@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+}
+
+._smp-frame-wrapper_ {
+    font-size: 0.9em !important;
+}

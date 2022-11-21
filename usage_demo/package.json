@@ -1,0 +1,47 @@
+{
+  "name": "react-dj-simple-month-picker",
+  "version": "1.0.2",
+  "description": "A simple month picker component",
+  "private": false,
+  "license": "Apache License 2.0",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "build-localhost": "react-scripts build",
+    "start": "react-scripts start",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "keywords": [
+    "month picker",
+    "simple month picker",
+    "react month picker"
+  ],
+  "author": "Daniel da Silva Jegorschki Santos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsjsantos/react-dj-forms-builder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dsjsantos/react-dj-forms-builder/issues"
+  },
+  "homepage": "https://github.com/dsjsantos/react-dj-forms-builder#readme"
+}
