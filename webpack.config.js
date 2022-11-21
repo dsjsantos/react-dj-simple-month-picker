@@ -30,8 +30,7 @@ module.exports = {
       'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
     }
   },
-  externals: {
-    // Don't bundle react or react-dom      
+  externals: { // Don't bundle react or react-dom      
     react: {
       commonjs: "react",
       commonjs2: "react",

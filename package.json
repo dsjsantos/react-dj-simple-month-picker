@@ -1,6 +1,6 @@
 {
   "name": "react-dj-simple-month-picker",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A simple month picker component",
   "private": false,
   "main": "./lib/index.js",
