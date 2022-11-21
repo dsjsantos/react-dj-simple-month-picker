@@ -1,5 +1,5 @@
-dist
 src
+usage_demo
 .babelrc
 .eslintrc.js
 .storybook

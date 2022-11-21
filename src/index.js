@@ -68,6 +68,7 @@ class PickerBox extends Component {
         }
         
         let content = monthMask;
+        content = content.replace("Y", year);
         if(/^[^M]*MMMM[^M]*$/.test(content)) {
             content = content.replace("MMMM", this._getMonthName(month));
         } else if(/^[^M]*MMM[^M]*$/.test(content)) {
@@ -77,7 +78,6 @@ class PickerBox extends Component {
         } else if(/^[^M]*M[^M]*$/.test(content)) {
             content = content.replace("M", month);
         }
-        content = content.replace("Y", year);
 
         return content;
     }
@@ -85,18 +85,18 @@ class PickerBox extends Component {
     _getMonthName = (month) => {
         const { months } = this.props.language || {};
         if(months && isArray(months.name) && months.name.length===12) {
-            return months.name[month];
+            return months.name[month-1];
         } else {
-            return MONTH_NAME[month];
+            return MONTH_NAME[month-1];
         }
     }
 
     _getMonthShortName = (month) => {
         const { months } = this.props.language || {};
         if(months && isArray(months.shortName) && months.shortName.length===12) {
-            return months.shortName[month];
+            return months.shortName[month-1];
         } else {
-            return MONTH_SHORT[month];
+            return MONTH_SHORT[month-1];
         }
     }
 

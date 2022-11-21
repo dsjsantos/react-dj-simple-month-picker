@@ -25,76 +25,41 @@ import SimpleMonthPicker from 'react-dj-simple-month-picker';
 #### Code snippet for a component
 
 ```jsx
-constructor(props, context) {
-    super(props, context)
-    this.state = {
-        pickerVisible: false,
-        selectedMonth: null
-    }
-}
+.
+.
+.
+const [ pickerVisible, setPickerVisible ] = useState(false);
+const [ selectedMonthYear, setSelectedMonthYear ] = useState(null);
+.
+.
+.
+<button type="button" onClick={() => setPickerVisible(true)}>
+    {selectedMonthYear ? `Year:${selectedMonthYear.year} / Month: ${selectedMonthYear.month}` : "Pick a month"}
+</button>
 
-handlePickerChange = ({ year, month }) => {
-    console.log("Month selection changed >>> ", { year, month });
-    this.setState({
-        selectedMonth: month
-    });
-}
-
-handlePickerSelect = ({ year, month }) => {
-    console.log("Month selected >>> ", { year, month });
-    this.setState({
-        selectedMonth: month
-    });
-}
-
-hideMonthPicker = () => {
-    this.setState({
-        pickerVisible: false
-    });
-}
-
-showMonthPicker = () => {
-    this.setState({
-        pickerVisible: true
-    });
-}
-
-render() {
-    const { pickerVisible, selectedMonth } = this.state;
-    const period = {
-        min: 2018,
-        max: 2045,
-        initialYear: 2018
-    };
-    const language = {
+<SimpleMonthPicker
+    value={selectedMonthYear}
+    visible={pickerVisible}
+    dismissOnEsc={true}
+    theme="dark"
+    monthMask="MMMM/Y"
+        period={{
+        min: 2022,
+        max: 2100,
+        initialYear: 2022
+    }}
+    language={{
         months: { 
             name: ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER']
         }
-    };
-
-    return(
-        <button 
-            type="button"
-            onClick={() => showMonthPicker()}
-        >
-            {selectedMonth ? selectedMonth : "Pick a month"}
-        </button>
-
-        <SimpleMonthPicker
-            value={selectedMonth}
-            visible={pickerVisible}
-            dismissOnEsc={true}
-            theme="dark"
-            monthMask="MMMM/Y"
-            period={period}
-            language={language}
-            onChange={this.handlePickerChange}
-            onSelect={this.handlePickerSelect}
-            onDismiss={this.hideMonthPicker}
-        /> 
-    )
-}
+    }}
+    onChange={my => { console.log("Change to:", my)}}
+    onSelect={my => { console.log("Selected:", my); setSelectedMonthYear(my) }}
+    onDismiss={() => setPickerVisible(false)}
+/> 
 ```
+
+See a full demo code at then [usage_demo](https://github.com/dsjsantos/react-dj-simple-month-picker/tree/main/usage_demo)
 
 ## Properties
 
@@ -139,7 +104,7 @@ You may use one month mask and/or a year mask plus separators like (-, /, space,
 
 > Examples: "MMMM-Y" | "Y/MMM" | "M/Y" | ...
 
-Is a ampty or invalid mask where provided the default mask "MM/Y" will be used.
+Is a empty or invalid mask where provided the default mask "MM/Y" will be used.
 
 ##### @language
 
@@ -227,16 +192,24 @@ npm run build
 
 ## Changelogs
 
-#### v1.0.1 (March 21, 2021)
+### v1.1.0 (November 21, 2022)
+#### Added
+- Component [usage demo](https://github.com/dsjsantos/react-dj-simple-month-picker/tree/main/usage_demo)
+#### Fixed
+- Bug in mask replacement that caused month display error in some scenarios
+#### Changes
+- Small internal style improvement
+- Validate and upgrade peer dependencies
+
+### v1.0.1 (March 21, 2021)
 - Removed a log output
 
-#### v1.0.0 (March 21, 2021)
+### v1.0.0 (March 21, 2021)
 - First component release
 
 ## License
 
 [Apache License v2.0](https://opensource.org/licenses/Apache-2.0)
-
 
 
 ### Enjoy-it

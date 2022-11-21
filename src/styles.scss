@@ -71,11 +71,14 @@ div#_simpleMonthPickerId_._smp-box_ {
     }
 
     & > ._month-row_ {
+        display: flex;
+        justify-content: space-between;
+
         & > ._month-item-wrapper_ {
             padding: 1px;
             display: inline-block;
             height: 100%;
-            width: 25%;
+            width: calc(25% - 2px); // remove (2 * horizontal padding)
             height: auto;
 
             ._month-item-box_ {

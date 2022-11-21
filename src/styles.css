@@ -45,17 +45,20 @@ div#_simpleMonthPickerId_._smp-box_ {
         cursor: pointer; }
     div#_simpleMonthPickerId_._smp-box_ > ._year-row_ > ._year-item-wrapper_ ._info-box_ {
       width: 100%; }
-  div#_simpleMonthPickerId_._smp-box_ > ._month-row_ > ._month-item-wrapper_ {
-    padding: 1px;
-    display: inline-block;
-    height: 100%;
-    width: 25%;
-    height: auto; }
-    div#_simpleMonthPickerId_._smp-box_ > ._month-row_ > ._month-item-wrapper_ ._month-item-box_ {
-      padding: 0.75em 0;
-      text-align: center; }
-      div#_simpleMonthPickerId_._smp-box_ > ._month-row_ > ._month-item-wrapper_ ._month-item-box_.clickable:hover {
-        cursor: pointer; }
+  div#_simpleMonthPickerId_._smp-box_ > ._month-row_ {
+    display: flex;
+    justify-content: space-between; }
+    div#_simpleMonthPickerId_._smp-box_ > ._month-row_ > ._month-item-wrapper_ {
+      padding: 1px;
+      display: inline-block;
+      height: 100%;
+      width: calc(25% - 2px);
+      height: auto; }
+      div#_simpleMonthPickerId_._smp-box_ > ._month-row_ > ._month-item-wrapper_ ._month-item-box_ {
+        padding: 0.75em 0;
+        text-align: center; }
+        div#_simpleMonthPickerId_._smp-box_ > ._month-row_ > ._month-item-wrapper_ ._month-item-box_.clickable:hover {
+          cursor: pointer; }
   div#_simpleMonthPickerId_._smp-box_.theme-light > ._year-row_ > ._year-item-wrapper_ {
     background-color: #bdbdbd; }
     div#_simpleMonthPickerId_._smp-box_.theme-light > ._year-row_ > ._year-item-wrapper_ ._button-box_, div#_simpleMonthPickerId_._smp-box_.theme-light > ._year-row_ > ._year-item-wrapper_ ._info-box_ {
