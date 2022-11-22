@@ -54,8 +54,11 @@ div#_simpleMonthPickerId_._smp-box_ {
       padding: 1px;
       display: inline-block;
       height: 100%;
-      width: calc(25% - 2px);
-      height: auto; }
+      width: 25%;
+      height: auto;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
       div#_simpleMonthPickerId_._smp-box_ > ._month-row_ > ._month-item-wrapper_ ._month-item-box_ {
         padding: 0.75em 0;
         text-align: center; }

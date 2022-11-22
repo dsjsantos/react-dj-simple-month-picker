@@ -192,6 +192,10 @@ npm run build
 
 ## Changelogs
 
+### v1.1.1 (November 22, 2022)
+#### Fixed
+- Small internal style improvement
+
 ### v1.1.0 (November 21, 2022)
 #### Added
 - Component [usage demo](https://github.com/dsjsantos/react-dj-simple-month-picker/tree/main/usage_demo)

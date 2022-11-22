@@ -1,6 +1,6 @@
 {
   "name": "react-dj-simple-month-picker",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple month picker component",
   "private": false,
   "main": "./lib/index.js",
@@ -24,12 +24,16 @@
     "webpack-cli": "^5.0.0"
   },
   "dependencies": {},
+  "keywords": [
+    "month picker",
+    "simple month picker",
+    "react month picker"
+  ],
+  "author": "Daniel da Silva Jegorschki Santos",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dsjsantos/react-dj-simple-month-picker.git"
   },
-  "keywords": [],
-  "author": "",
   "bugs": {
     "url": "https://github.com/dsjsantos/react-dj-simple-month-picker/issues"
   },
